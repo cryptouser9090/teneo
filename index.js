@@ -71,12 +71,15 @@ function promptUseProxy() {
       input: process.stdin,
       output: process.stdout
     });
+    useProxy = true;
+    resolve();
 
-    rl.question('Do you want to use a proxy? (y/n): ', (answer) => {
-      useProxy = answer.toLowerCase() === 'y';
-      rl.close();
-      resolve();
-    });
+    // rl.question('Do you want to use a proxy? (y/n): ', (answer) => {
+    //   // useProxy = answer.toLowerCase() === 'y';
+      
+    //   rl.close();
+    //   resolve();
+    // });
   });
 }
 
